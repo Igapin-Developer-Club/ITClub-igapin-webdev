@@ -1,0 +1,428 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  &.buddypress {
+    &.activation,
+    &.registration {
+      display: flex;
+      background: var(--color-wplogin-body);
+      overflow: hidden;
+
+      .vkregister-header {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        .vkregister-header-pretitle,
+        .vkregister-header-title,
+        .vkregister-header-text {
+          color: var(--color-wplogin-header-text);
+          text-align: center;
+        }
+  
+        .vkregister-header-pretitle,
+        .vkregister-header-title {
+          text-transform: uppercase;
+        }
+  
+        .vkregister-header-pretitle {
+          font-size: $fs-24;
+          font-weight: $weight-medium;
+        }
+  
+        .vkregister-header-title {
+          font-family: var(--font-secondary);
+          font-size: $fs-104;
+          font-weight: $weight-black;
+        }
+  
+        .vkregister-header-text {
+          width: 400px;
+          margin: 32px auto 0;
+          font-size: $fs-18;
+          font-weight: $weight-medium;
+          line-height: (24 / 18) * 1em;
+  
+          .bold {
+            font-weight: $weight-bold;
+          }
+        }
+      }
+
+      #buddypress {
+        width: 45%;
+        padding: 80px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .vkregister-logo {
+          display: block;
+          width: auto;
+          height: auto;
+          margin: 0 auto;
+        }
+
+        .vkregister-form-title {
+          margin: 60px 0 40px;
+          font-size: $fs-26;
+          font-weight: $weight-bold;
+          text-align: center;
+        }
+
+        #activate-page {
+          #template-notices {
+            & + {
+              p {
+                margin: 40px auto 0;
+              }
+            }
+          }
+        }
+
+        #template-notices {
+          width: 356px;
+          min-height: 1px;
+          margin: 0 auto;
+
+          & > {
+            p {
+              font-size: $fs-16;
+              line-height: (22 / 16) * 1em;
+              font-weight: $weight-medium;
+              text-align: center;
+            }
+          }
+
+          & + {
+            p {
+              width: 80%;
+              margin: 0 auto 40px;
+              font-size: $fs-16;
+              line-height: (22 / 16) * 1em;
+              font-weight: $weight-medium;
+              text-align: center;
+            }
+          }
+        }
+
+        .bp-template-notice {
+          padding: 22px 28px 22px 64px;
+          border-radius: 12px;
+          box-shadow: var(--color-box-shadow);
+          position: relative;
+
+          &::before {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+          }
+
+          p {
+            color: #fff;
+            font-size: $fs-14;
+            font-weight: $weight-medium;
+            line-height: (18 / 14) * 1em;
+          }
+
+          &.updated,
+          &.success {
+            background-color: #00c7d9;
+
+            &::before {
+              content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IlN1Y2Nlc3NfQm94X0ljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCINCgkgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBkPSJNMTYsMjBINGMtMi4yMDksMC00LTEuNzkxLTQtNFY0YzAtMi4yMDgsMS43OTEtNCw0LTRoMTINCgljMi4yMDksMCw0LDEuNzkxLDQsNHYxMkMyMCwxOC4yMDksMTguMjA5LDIwLDE2LDIweiBNMTgsNGMwLTEuMTAzLTAuODk3LTItMi0ySDRDMi44OTcsMiwyLDIuODk3LDIsNHYxMg0KCWMwLDEuMTAzLDAuODk3LDIuMDAxLDIsMi4wMDFoMTJjMS4xMDMsMCwyLTAuODk4LDItMi4wMDFWNHogTTQuOTk1LDEwLjk3M2wxLjA4OC0xLjc0NmwzLjc3MSwyLjAxNmwzLjI2NS01LjIzN2wxLjg4NiwxLjAwOA0KCWwtNC4zNTQsNi45ODJMNC45OTUsMTAuOTczeiIvPg0KPC9zdmc+DQo=');
+            }
+          }
+
+          &.error {
+            background-color: #fd4350;
+
+            &::before {
+              content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkVycm9yX0JveF9JY29uIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiDQoJIHk9IjBweCIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDIwIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZmZmZiIgZD0iTTE2LDIwSDRjLTIuMjA5LDAtNC0xLjc5MS00LTRWNGMwLTIuMjA4LDEuNzkxLTQsNC00aDEyDQoJYzIuMjA5LDAsNCwxLjc5MSw0LDR2MTJDMjAsMTguMjA5LDE4LjIwOSwyMCwxNiwyMHogTTE4LDRjMC0xLjEwMy0wLjg5Ny0yLTItMkg0QzIuODk3LDIsMiwyLjg5NywyLDR2MTINCgljMCwxLjEwMywwLjg5NywyLjAwMSwyLDIuMDAxaDEyYzEuMTAzLDAsMi0wLjg5OCwyLTIuMDAxVjR6IE0xMi40MDIsMTQuMDA2TDEwLDExLjYwM2wtMi40MDMsMi40MDNsLTEuNjAyLTEuNjAzbDIuNDAzLTIuNDAyDQoJTDUuOTk1LDcuNTk4bDEuNjAyLTEuNjAyTDEwLDguMzk5bDIuNDAyLTIuNDAzbDEuNjAzLDEuNjAybC0yLjQwMywyLjQwM2wyLjQwMywyLjQwMkwxMi40MDIsMTQuMDA2eiIvPg0KPC9zdmc+DQo=');
+            }
+          }
+        }
+
+        .page {
+          form {
+            width: 356px;
+            margin: 40px auto 0;
+
+            #pass-strength-result,
+            .error {
+              margin-top: 12px;
+              color: #fd4350;
+              font-size: $fs-14;
+              font-weight: $weight-bold;
+            }
+
+            #pass-strength-result {
+              &.good {
+                color: #ffba00;
+              }
+
+              &.strong {
+                color: #00c7d9;
+              }
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="search"],
+            input[type="number"],
+            select {
+              height: 52px;
+            }
+
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="search"],
+            input[type="number"],
+            textarea {
+              background: var(--color-wplogin-body);
+            }
+
+            select {
+              padding: 0 40px 0 20px;
+              font-size: $fs-14;
+              cursor: pointer;
+            }
+
+            .form-item {
+              & + {
+                .submit {
+                  margin-top: 28px;
+                }
+              }
+            }
+
+            .form-input {
+              label {
+                margin: 0;
+                color: var(--color-text-alt-2);
+                font-size: $fs-16;
+                font-weight: $weight-semibold;
+              }
+            }
+
+            label {
+              margin-top: 28px;
+            }
+
+            fieldset {
+              margin-bottom: 28px;
+            }
+
+            legend,
+            label {
+              margin-bottom: 16px;
+              color: var(--color-text);
+              font-size: $fs-14;
+              font-weight: $weight-bold;
+            }
+
+            fieldset {
+              label {
+                margin-top: 0;
+              }
+
+              select {
+                margin-bottom: 16px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+            }
+    
+            input[type="submit"] {
+              width: 100%;
+              height: 54px;
+              padding: 0 18px;
+              border-radius: 12px;
+              border-color: transparent;
+              background: var(--color-secondary);
+              color: #fff;
+              font-size: $fs-16;
+              font-weight: $weight-bold;
+              box-shadow: var(--color-secondary-shadow);
+              cursor: pointer;
+              transition: background-color .2s ease-in-out;
+    
+              &:hover {
+                background: var(--color-secondary-hover);
+              }
+            }
+
+            .register-section {
+              & + {
+                .register-section {
+                  margin-top: 32px;
+                }
+              }
+
+              h2 {
+                font-size: $fs-18;
+                margin-bottom: 28px;
+              }
+            }
+
+            .option-label {
+              cursor: pointer;
+
+              input[type="checkbox"],
+              input[type="radio"] {
+                margin-right: 6px;
+                position: relative;
+                top: 2px;
+              }
+            }
+
+            .wp-editor-tools {
+              margin-bottom: 12px;
+            }
+
+            .wp-switch-editor {
+              width: auto;
+              height: 30px;
+              margin: 0 6px 0 0;
+              padding: 0 32px;
+              border-radius: 12px;
+              border: 1px solid var(--color-border);
+              background-color: transparent;
+              color: var(--color-text-alt-2);
+              font-size: $fs-14;
+              box-shadow: none;
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+
+            .tmce-active {
+              .switch-tmce {
+                border-color: var(--color-primary);
+                background-color: var(--color-primary);
+                color: $white;
+              }
+            }
+
+            .html-active {
+              .switch-html {
+                border-color: var(--color-primary);
+                background-color: var(--color-primary);
+                color: $white;
+              }
+            }
+
+            .error,
+            .vk-bp-register-disabled-text {
+              color: #fd4350;
+              font-weight: $weight-bold;
+            }
+
+            .vk-bp-register-disabled-text {
+              text-align: center;
+            }
+
+            .error {
+              margin-bottom: 8px;
+              font-size: $fs-12;
+            }
+
+            .clear-value {
+              color: var(--color-primary);
+              font-size: $fs-14;
+              font-weight: $weight-bold;
+            }
+
+            .field-visibility-settings-toggle,
+            .field-visibility-settings-notoggle {
+              margin-top: 12px;
+              font-size: $fs-14;
+              font-weight: $weight-bold;
+
+              .current-visibility-level {
+                color: var(--color-primary-dark);
+              }
+            }
+          }
+        }
+
+        .vk-bp-register-page-nav {
+          margin: 32px auto 0;
+          padding: 0;
+          font-size: $fs-14;
+          font-weight: $weight-bold;
+          text-align: center;
+
+          a {
+            color: var(--color-text);
+            transition: color .2s ease-in-out;
+
+            &:focus,
+            &:hover {
+              color: var(--color-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------
+    2. MEDIA QUERIES
+-----------------------*/
+@media screen and (max-width: 1365px) {
+  body {
+    &.buddypress {
+      &.activation,
+      &.registration {
+        display: block;
+        overflow: auto;
+
+        .vkregister-header {
+          display: none;
+        }
+
+        #buddypress {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    &.buddypress {
+      &.activation,
+      &.registration {
+        #buddypress {
+          width: 90%;
+          margin: 0 auto;
+
+          .page {
+            form,
+            #template-notices {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

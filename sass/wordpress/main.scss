@@ -1,0 +1,65 @@
+/*-----------------
+    1. FONTS
+-----------------*/
+:root {
+  /*------------
+      FONTS
+  ------------*/
+  --vk-font-primary: 'Rajdhani', sans-serif;
+  --vk-font-secondary: 'Titillium Web', sans-serif;
+
+  /*------------
+      WEIGHTS
+  ------------*/
+  --vk-weight-regular: 400;
+  --vk-weight-medium: 500;
+  --vk-weight-semibold: 600;
+  --vk-weight-bold: 700;
+  --vk-weight-black: 900;
+
+  /*------------
+      COLORS
+  ------------*/
+  --vk-color-body: #f8f8fb;
+
+  --vk-color-text: #3e3f5e;
+  --vk-color-text-light: #8f91ac;
+  --vk-color-text-lighter: #adafca;
+
+  --vk-color-border: #dedeea;
+  --vk-color-divider: #eaeaf5;
+
+  --vk-color-void: #3e3f5e;
+  --vk-color-void-hover: #2e2e47;
+  --vk-color-void-shadow: 3px 5px 10px 0 rgba(62, 63, 94, .2);
+
+  --vk-color-primary: #23d2e2;
+  --vk-color-primary-hover: #1bc5d4;
+  --vk-color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+
+  --vk-color-secondary: #615dfa;
+  --vk-color-secondary-hover: #5753e4;
+  --vk-color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+
+  --vk-color-tertiary: #fd4350;
+  --vk-color-tertiary-hover: #dd343f;
+  --vk-color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+
+  --vk-color-icon: #3e3f5e;
+}
+
+/*-----------------
+    2. MODULES
+-----------------*/
+@import 'post-format';
+@import 'reset';
+@import 'general';
+@import 'icon';
+@import 'loader';
+@import 'button';
+@import 'message-line';
+@import 'message-box';
+@import 'list';
+@import 'table';
+@import 'form';
+@import 'section';

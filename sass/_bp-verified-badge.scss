@@ -1,0 +1,40 @@
+.activity {
+  .bp-verified-badge {
+    margin-right: 0;
+  }
+}
+
+.author-preview-title,
+.author-preview-text,
+.user-status-title.medium,
+.user-preview.small .user-short-description-title,
+.vikinger-forum-reply-author-title,
+.navigation-widget .user-short-description-title,
+.user-preview-widget .user-short-description-title {
+  .bp-verified-badge {
+    width: 16px;
+    height: 16px;
+    background-size: 6px 6px;
+  }
+}
+
+.post-comment-text,
+.user-status-title,
+.navigation-widget-info-title,
+.user-preview.landscape .user-short-description-title,
+.bbp-forum-description-author-title,
+.forum-topic-meta-author-title,
+.user-preview-author-text,
+.woocommerce-review__author {
+  .bp-verified-badge {
+    width: 14px;
+    height: 14px;
+    background-size: 6px 6px;
+  }
+}
+
+.post-comment-text {
+  .bp-verified-badge {
+    margin-left: -2px;
+  }
+}

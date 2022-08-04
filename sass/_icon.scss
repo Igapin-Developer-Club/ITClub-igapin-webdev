@@ -1,0 +1,241 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. ICONS
+-------------------------------------------------------------------*/
+/*-----------------
+    1. ICONS
+-----------------*/
+.icon-facebook,
+.icon-twitter,
+.icon-twitch,
+.icon-youtube,
+.icon-instagram,
+.icon-patreon,
+.icon-discord,
+.icon-behance,
+.icon-deviantart,
+.icon-artstation,
+.icon-dribbble,
+.icon-spotify,
+.icon-snapchat,
+.icon-skype,
+.icon-reddit,
+.icon-pinterest,
+.icon-messenger,
+.icon-linkedin,
+.icon-github,
+.icon-whatsapp,
+.icon-vk,
+.icon-tumblr,
+.icon-tiktok,
+.icon-unsplash,
+.icon-flickr,
+.icon-cross {
+  fill: $white;
+  width: 12px;
+  height: 12px;
+}
+
+.icon-logo-vikinger {
+  fill: $white;
+  width: 42px;
+  height: 60px;
+
+  &.small {
+    width: 28px;
+    height: 40px;
+  }
+}
+
+.icon-dots {
+  fill: $white;
+  width: 10px;
+  height: 2px;
+}
+
+.icon-public,
+.icon-private {
+  fill: var(--color-icon-highlighted);
+  width: 20px;
+  height: 20px;
+}
+
+.icon-comment,
+.icon-thumbs-up,
+.icon-friend,
+.icon-info,
+.icon-success,
+.icon-error,
+.icon-group,
+.icon-marketplace,
+.icon-add-friend,
+.icon-remove-friend,
+.icon-delete,
+.icon-send-message,
+.icon-settings,
+.icon-cross-thin,
+.icon-newsfeed,
+.icon-overview,
+.icon-members,
+.icon-memberships,
+.icon-badges,
+.icon-quests,
+.icon-streams,
+.icon-events,
+.icon-events-monthly,
+.icon-events-weekly,
+.icon-events-daily,
+.icon-pin,
+.icon-ticket,
+.icon-forums,
+.icon-profile,
+.icon-timeline,
+.icon-photos,
+.icon-videos,
+.icon-headphones,
+.icon-blog-posts,
+.icon-forum,
+.icon-store,
+.icon-share,
+.icon-pinned,
+.icon-favorite,
+.icon-status,
+.icon-big-grid-view,
+.icon-small-grid-view,
+.icon-list-grid-view,
+.icon-poll,
+.icon-camera,
+.icon-emoji,
+.icon-gif,
+.icon-tags,
+.icon-trophy,
+.icon-return,
+.icon-clock,
+.icon-earnings,
+.icon-wallet,
+.icon-item,
+.icon-revenue,
+.icon-credits,
+.icon-ranks,
+.icon-admin-crown,
+.icon-mod-shield,
+.icon-ban,
+.icon-remove-user {
+  fill: var(--color-icon);
+  width: 20px;
+  height: 20px;
+}
+
+.icon-grid,
+.icon-magnifying-glass,
+.icon-messages,
+.icon-shopping-bag,
+.icon-notification,
+.icon-join-group,
+.icon-leave-group,
+.icon-plus,
+.icon-login,
+.icon-gallery,
+.icon-link,
+.icon-light-theme,
+.icon-dark-theme {
+  fill: $white;
+  width: 20px;
+  height: 20px;
+}
+
+.icon-back-arrow {
+  width: 14px;
+  height: 10px;
+}
+
+.icon-small-arrow {
+  fill: var(--color-icon);
+  width: 6px;
+  height: 8px;
+}
+
+.icon-big-arrow {
+  fill: $black;
+  width: 8px;
+  height: 12px;
+}
+
+.icon-more-dots {
+  fill: $white;
+  width: 22px;
+  height: 6px;
+
+  &.small {
+    width: 16px;
+    height: 5px;
+  }
+}
+
+.icon-starred {
+  fill: $yellow;
+  width: 11px;
+  height: 10px;
+}
+
+.icon-star {
+  fill: $gray-lighter;
+  width: 9px;
+  height: 8px;
+
+  &.medium {
+    width: 13px;
+    height: 12px;
+  }
+}
+
+.icon-play {
+  fill: $white;
+  width: 12px;
+  height: 14px;
+
+  &.medium {
+    width: 16px;
+    height: 18px;
+  }
+}
+
+.icon-speaker {
+  fill: $white;
+  width: 26px;
+  height: 22px;
+}
+
+.icon-plus-small,
+.icon-minus-small {
+  fill: $black;
+  width: 8px;
+  height: 8px;
+}
+
+.icon-quote {
+  fill: $black;
+  width: 32px;
+  height: 22px;
+}
+
+.icon-check {
+  width: 12px;
+  height: 9px;
+}
+
+.icon-check-small {
+  width: 6px;
+  height: 6px;
+}
+
+.demo-icon {
+  fill: var(--color-icon-highlighted);
+}
+
+.icon-no-results {
+  fill: var(--color-icon);
+  width: 172px;
+  height: 156px;
+}

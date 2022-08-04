@@ -1,0 +1,40 @@
+{
+  "name": "vikinger",
+  "version": "1.0.0",
+  "description": "The next generation WordPress+Buddypress social community! We carefully designed this theme for you to have all you need to build an incredible community with full profiles, reactions, groups, badges, quests, ranks, credits and much more to come!",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "build": "browserify ./js/source/app.js --extension=js -t [ babelify --presets [ @babel/env @babel/preset-react ] ] -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./js/app.bundle.min.js",
+    "build_admin": "browserify ./js/source/admin.js --extension=jsx --extension=js -t [ babelify --presets [ @babel/env @babel/preset-react ] ] -g [ envify --NODE_ENV production ] -g uglifyify | terser --compress --mangle > ./js/admin.bundle.min.js"
+  },
+  "author": "Odin Design Themes (https://odindesignthemes.com/)",
+  "license": "https://themeforest.net/licenses/",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "cssnano": "^4.1.10",
+    "envify": "^4.1.0",
+    "eslint": "^6.8.0",
+    "grunt": "^1.3.0",
+    "grunt-browserify": "^5.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^3.1.0",
+    "node-sass": "^4.14.1",
+    "terser": "^5.3.7",
+    "uglifyify": "^5.0.2"
+  },
+  "dependencies": {
+    "progressbar.js": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "simplebar": "^5.2.1",
+    "simplebar-react": "^2.2.1"
+  }
+}

@@ -1,0 +1,134 @@
+.vk-content {
+  /*------------------
+      ORDERED LIST
+  ------------------*/
+  .ordered-list {
+    padding-left: 16px;
+
+    .ordered-list-item {
+      display: flex;
+      margin-bottom: 16px;
+
+      .ordered-list-item-number,
+      .ordered-list-item-text {
+        font-size: 18px;
+        line-height: (24 / 18) * 1em;
+      }
+
+      .ordered-list-item-number {
+        flex-shrink: 0;
+        margin-right: 8px;
+        color: var(--vk-color-text);
+        font-weight: var(--vk-weight-bold);
+      }
+
+      .ordered-list-item-text {
+        color: var(--vk-color-text-light);
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  /*------------------
+      UNORDERED LIST
+  ------------------*/
+  .unordered-list {
+    &.unordered-list-bold {
+      .unordered-list-item-text {
+        a {
+          color: var(--vk-color-text);
+          font-weight: 700;
+
+          &:hover {
+            color: var(--vk-color-primary);
+          }
+        }
+      }
+    }
+
+    .unordered-list {
+      margin-top: 32px;
+    }
+
+    .unordered-list-item {
+      padding-left: 16px;
+      margin-bottom: 32px;
+      position: relative;
+
+      .unordered-list-item-text {
+        color: var(--vk-color-text);
+        font-size: 18px;
+        line-height: (24 / 18) * 1em;
+
+        .bold {
+          font-weight: 700;
+        }
+      }
+
+      &::before {
+        content: '-';
+        margin-right: 8px;
+        font-family: var(--vk-font-primary);
+        color: var(--vk-color-primary);
+        font-size: 18px;
+        font-weight: var(--vk-weight-bold);
+        line-height: (24 / 18) * 1em;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /*------------------
+      CHECK LIST
+  ------------------*/
+  .check-list {
+    .check-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .check-list-item-text {
+        font-size: 18px;
+        font-weight: var(--vk-weight-bold);
+      }
+
+      .loader-spinner-wrap {
+        margin-right: 5px;
+      }
+
+      .check-list-item-status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        border: 1px solid var(--vk-color-border);
+
+        &.check-list-item-status-success {
+          background-color: var(--vk-color-primary);
+          border-color: var(--vk-color-primary);
+        }
+
+        &.check-list-item-status-error {
+          background-color: var(--vk-color-tertiary);
+          border-color: var(--vk-color-tertiary);
+        }
+      }
+    }
+  }
+}

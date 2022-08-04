@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .achievement-preview-list
+2. .achievement-preview
+-------------------------------------------------------------------*/
+/*----------------------------
+    1. ACHIEVEMENT PREVIEW LIST
+----------------------------*/
+.achievement-preview-list {
+  .achievement-preview {
+    margin-bottom: 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*-----------------------
+    2. ACHIEVEMENT PREVIEW
+-----------------------*/
+.achievement-preview {
+  .achievement-preview-info {
+    padding: 2px 8px 0 44px;
+    position: relative;
+
+    .achievement-preview-image {
+      width: 32px;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .achievement-preview-title {
+      font-size: $fs-14;
+      font-weight: $weight-bold;
+    }
+
+    .achievement-preview-text {
+      margin-top: 4px;
+      color: var(--color-text);
+      font-size: $fs-12;
+      font-weight: $weight-medium;
+      line-height: (16 / 12) * 1em;
+    }
+  }
+
+  .progress-stat {
+    margin-top: 16px;
+  }
+}

@@ -1,0 +1,68 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .error-section
+-------------------------------------------------------------------*/
+/*-----------------------
+    1. ERROR SECTION
+-----------------------*/
+.error-section {
+  margin-top: 32px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .error-section-title {
+    margin-top: 36px;
+    color: var(--color-secondary);
+    font-size: $fs-144;
+    font-weight: $weight-bold;
+  }
+
+  .error-section-subtitle {
+    margin-top: 12px;
+    font-size: $fs-36;
+    font-weight: $weight-bold;
+  }
+
+  .error-section-description {
+    width: 90%;
+    max-width: 570px;
+    margin-top: 32px;
+    font-size: $fs-18;
+    line-height: (32 / 18) * 1em;
+    font-weight: $weight-medium;
+    text-align: center;
+  }
+
+  .error-section-button {
+    margin-top: 50px;
+    padding: 0 52px;
+    font-size: $fs-16;
+  }
+}
+
+/*-----------------------
+    2. MEDIA QUERIES
+-----------------------*/
+@media screen and (max-width: 480px) {
+  .error-section {
+    margin-top: 16px;
+    padding-bottom: 0;
+
+    .error-section-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .error-section-title {
+      font-size: $fs-104;
+    }
+
+    .error-section-subtitle {
+      width: 90%;
+      text-align: center;
+    }
+  }
+}

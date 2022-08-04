@@ -1,0 +1,20 @@
+.vikinger-pmpro-level-tag {
+  display: flex;
+  justify-content: center;
+
+  &.vikinger-pmpro-level-tag_small {
+    .vikinger-pmpro-level-tag-text {
+      padding-top: 5px;
+      font-size: $fs-11;
+    }
+  }
+
+  .vikinger-pmpro-level-tag-text {
+    padding: 4px 8px;
+    border-radius: 200px;
+    background-color: var(--color-secondary);
+    color: $white;
+    font-size: $fs-12;
+    font-weight: $weight-bold;
+  }
+}

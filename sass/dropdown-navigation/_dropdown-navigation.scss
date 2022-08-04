@@ -1,0 +1,71 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .dropdown-navigation
+-------------------------------------------------------------------*/
+/*----------------------------
+    1. DROPDOWN NAVIGATION
+----------------------------*/
+.dropdown-navigation {
+  min-width: 360px;
+  padding: 20px 28px;
+  border-radius: 10px;
+  background-color: var(--color-box-background);
+  box-shadow: var(--color-overbox-big-shadow);
+
+  &.header-settings-dropdown {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .dropdown-navigation-header {
+    display: flex;
+    justify-content: space-between;
+
+    .dropdown-navigation-button {
+      width: auto;
+      padding: 0 32px;
+      margin-top: 2px;
+    }
+  }
+
+  .dropdown-navigation-sections {
+    display: flex;
+    margin-top: 30px;
+
+    .dropdown-navigation-section {
+      width: 200px;
+
+      .dropdown-navigation-category {
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .dropdown-navigation-category {
+    margin: 20px 0 10px;
+    color: var(--color-text-alt-2);
+    font-size: $fs-12;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+  }
+
+  .dropdown-navigation-link {
+    display: block;
+    padding: 8px 0;
+    font-size: $fs-14;
+    font-weight: $weight-bold;
+    transition: padding .2s ease-in-out, color .2s ease-in-out;
+
+    .highlighted {
+      float: right;
+      color: var(--color-primary-dark);
+    }
+
+    &:hover {
+      padding-left: 4px;
+    }
+  }
+}

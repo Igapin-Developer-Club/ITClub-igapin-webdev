@@ -1,0 +1,60 @@
+.vk-content {
+  margin-left: -20px;
+  background-color: var(--vk-color-body);
+  border-bottom: 1px solid var(--vk-color-border);
+  font-size: 16px;
+  overflow-x: hidden;
+
+  /*--------------
+      GENERAL
+  --------------*/
+  * {
+    &::selection {
+      color: #fff;
+      background-color: var(--vk-color-primary);
+    }
+  }
+
+  .vk-content {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4,
+  h5, h6, a, p {
+    color: var(--vk-color-text);
+    font-family: var(--vk-font-primary);
+    line-height: 1em;
+  }
+  
+  h1, h2, h3,
+  h4, h5, h6 {
+    font-weight: var(--vk-weight-bold);
+  }
+  
+  p {
+    font-weight: var(--vk-weight-medium);
+
+    a {
+      color: var(--vk-color-primary);
+      font-weight: var(--vk-weight-semibold);
+    }
+
+    strong {
+      color: var(--vk-color-secondary);
+      font-weight: var(--vk-weight-bold);
+    }
+  }
+  
+  a {
+    &:hover {
+      color: var(--vk-color-primary);
+      text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,435 @@
+body {
+  font-family: var(--font-primary);
+
+  &.login {
+    display: flex;
+    background: var(--color-wplogin-body);
+
+    * {
+      &::selection {
+        color: #fff;
+        background-color: var(--color-primary);
+      }
+    }
+
+    h1, h2, h3, h4,
+    h5, h6, a, p {
+      color: var(--color-text);
+      line-height: 1em;
+    }
+
+    input {
+      &.password-input {
+        font-family: var(--font-primary);
+      }
+    }
+
+    .vklogin-header {
+      width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .vklogin-header-pretitle,
+      .vklogin-header-title,
+      .vklogin-header-text {
+        color: var(--color-wplogin-header-text);
+        text-align: center;
+      }
+
+      .vklogin-header-pretitle,
+      .vklogin-header-title {
+        text-transform: uppercase;
+      }
+
+      .vklogin-header-pretitle {
+        font-size: $fs-24;
+        font-weight: $weight-medium;
+      }
+
+      .vklogin-header-title {
+        font-family: var(--font-secondary);
+        font-size: $fs-104;
+        font-weight: $weight-black;
+      }
+
+      .vklogin-header-text {
+        width: 400px;
+        margin: 32px auto 0;
+        font-size: $fs-18;
+        font-weight: $weight-medium;
+        line-height: (24 / 18) * 1em;
+
+        .bold {
+          font-weight: $weight-bold;
+        }
+      }
+    }
+
+    #login {
+      width: 45%;
+      padding-top: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1 {
+        pointer-events: none;
+        
+        a {
+          text-indent: 0;
+          font-size: $fs-26;
+          font-weight: $weight-bold;
+
+          &:focus {
+            color: var(--color-text);
+            box-shadow: none;
+          }
+        }
+      }
+
+      form,
+      #backtoblog,
+      #nav,
+      .message,
+      #login_error {
+        width: 356px;
+      }
+
+      form {
+        margin: 80px auto 0;
+        padding: 0;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        overflow: visible;
+
+        .description {
+          &.indicator-hint {
+            font-size: $fs-14;
+            line-height: (18 / 14) * 1em;
+          }
+        }
+
+        #reg_passmail {
+          color: var(--color-text-alt-2);
+          font-size: $fs-14;
+          font-weight: $weight-semibold;
+        }
+
+        div.user-pass1-wrap {
+          position: relative;
+
+          &.active {
+            p > label {
+              background: var(--color-wplogin-body);
+              padding: 0 6px;
+              font-size: $fs-12;
+              top: -6px;
+              left: 12px;
+            }
+          }
+        
+          p > label {
+            color: var(--color-text-alt-2);
+            font-size: $fs-16;
+            font-weight: $weight-semibold;
+            line-height: 1em;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            transition: all .3s ease-in-out;
+            pointer-events: none;
+          }
+        }
+
+        div.user-pass-wrap,
+        p:not(.forgetmenot) {
+          position: relative;
+
+          &.active {
+            label {
+              background: var(--color-wplogin-body);
+              padding: 0 6px;
+              font-size: $fs-12;
+              top: -6px;
+              left: 12px;
+            }
+          }
+        
+          label {
+            color: var(--color-text-alt-2);
+            font-size: $fs-16;
+            font-weight: $weight-semibold;
+            line-height: 1em;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            transition: all .3s ease-in-out;
+            pointer-events: none;
+          }
+        }
+
+        label {
+          color: var(--color-text-alt-2);
+          font-size: $fs-14;
+          font-weight: $weight-semibold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="submit"],
+        .wp-generate-pw {
+          width: 100%;
+          height: 54px;
+          padding: 0 18px;
+          border-radius: 12px;
+          font-size: $fs-16;
+          font-weight: $weight-bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          margin: 0 0 28px 0;
+          border: 1px solid var(--color-border);
+          background: var(--color-wplogin-body);
+          color: var(--color-text);
+          transition: border-color .2s ease-in-out;
+
+          &:focus {
+            border-color: var(--color-secondary);
+            box-shadow: none;
+          }
+        }
+
+        .wp-generate-pw {
+          color: #fff;
+          box-shadow: var(--color-primary-shadow);
+          background: var(--color-primary);
+          border-color: transparent;
+          transition: background-color .2s ease-in-out;
+
+          &:hover {
+            background: var(--color-primary-hover);
+          }
+        }
+
+        input[type="submit"] {
+          box-shadow: var(--color-secondary-shadow);
+          background: var(--color-secondary);
+          border-color: transparent;
+          transition: background-color .2s ease-in-out;
+
+          &:hover {
+            background: var(--color-secondary-hover);
+          }
+        }
+
+        input[type="checkbox"] {
+          width: 22px;
+          height: 22px;
+          border: 1px solid var(--color-border);
+          border-radius: 6px;
+          background: var(--color-wplogin-body);
+
+          &::before {
+            display: none;
+            content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNoZWNrYm94X0Nyb3NzX0ljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiDQoJIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMTJweCIgaGVpZ2h0PSIxMnB4IiB2aWV3Qm94PSIwIDAgMTIgMTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDEyIDEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjRkZGRkZGIiBkPSJNMTIsOS42TDkuNiwxMkw2LDguMzk5TDIuNCwxMkwwLDkuNkwzLjYsNkwwLDIuNEwyLjQsMEw2LDMuNg0KCUw5LjYsMEwxMiwyLjRMOC4zOTksNkwxMiw5LjZ6Ii8+DQo8L3N2Zz4NCg==');
+            width: 12px;
+            height: 12px;
+            margin: 0;
+            padding: 4px;
+          }
+
+          &:focus,
+          &:checked {
+            box-shadow: none;
+            border-color: var(--color-primary);
+          }
+
+          &:checked {
+            background: var(--color-primary);
+
+            &::before {
+              display: block;
+            }
+          }
+        }
+
+        .wp-pwd {
+          .button {
+            &.wp-hide-pw {
+              margin-top: 7px;
+
+              .dashicons {
+                color: var(--color-secondary);
+              }
+
+              &:focus {
+                box-shadow: none;
+                border-color: var(--color-secondary);
+              }
+            }
+          }
+        }
+
+        .forgetmenot {
+          float: none;
+          margin-bottom: 28px;
+
+          label {
+            color: var(--color-text);
+            font-weight: $weight-bold;
+          }
+        }
+
+        .submit {
+          .button-primary {
+            float: none;
+          }
+        }
+      }
+
+      #backtoblog,
+      #nav {
+        margin: 32px auto 0;
+        padding: 0;
+        font-size: $fs-14;
+        font-weight: $weight-bold;
+
+        a {
+          transition: color .2s ease-in-out;
+
+          &:focus {
+            box-shadow: none;
+          }
+
+          &:focus,
+          &:hover {
+            color: var(--color-primary);
+          }
+        }
+      }
+
+      #nav {
+        color: var(--color-text);
+        text-align: center;
+
+        a {
+          color: var(--color-text);
+        }
+      }
+
+      #backtoblog {
+        a {
+          color: var(--color-text-alt-2);
+        }
+      }
+
+      .message,
+      #login_error {
+        margin: 32px auto 0;
+        padding: 22px 28px 22px 64px;
+        border-radius: 12px;
+        border-left: none;
+        color: #fff;
+        font-size: $fs-14;
+        font-weight: $weight-medium;
+        line-height: (18 / 14) * 1em;
+        box-shadow: var(--color-box-shadow);
+        position: relative;
+
+        & + {
+          form {
+            margin-top: 40px;
+          }
+        }
+
+        &::before {
+          display: block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+        }
+
+        a {
+          color: #fff;
+          font-weight: $weight-semibold;
+
+          &:focus {
+            box-shadow: none;
+            border: 1px solid #fff;
+          }
+        }
+      }
+
+      #login_error {
+        background-color: #fd4350;
+
+        &::before {
+          content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkVycm9yX0JveF9JY29uIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiDQoJIHk9IjBweCIgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDIwIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI2ZmZmZmZiIgZD0iTTE2LDIwSDRjLTIuMjA5LDAtNC0xLjc5MS00LTRWNGMwLTIuMjA4LDEuNzkxLTQsNC00aDEyDQoJYzIuMjA5LDAsNCwxLjc5MSw0LDR2MTJDMjAsMTguMjA5LDE4LjIwOSwyMCwxNiwyMHogTTE4LDRjMC0xLjEwMy0wLjg5Ny0yLTItMkg0QzIuODk3LDIsMiwyLjg5NywyLDR2MTINCgljMCwxLjEwMywwLjg5NywyLjAwMSwyLDIuMDAxaDEyYzEuMTAzLDAsMi0wLjg5OCwyLTIuMDAxVjR6IE0xMi40MDIsMTQuMDA2TDEwLDExLjYwM2wtMi40MDMsMi40MDNsLTEuNjAyLTEuNjAzbDIuNDAzLTIuNDAyDQoJTDUuOTk1LDcuNTk4bDEuNjAyLTEuNjAyTDEwLDguMzk5bDIuNDAyLTIuNDAzbDEuNjAzLDEuNjAybC0yLjQwMywyLjQwM2wyLjQwMywyLjQwMkwxMi40MDIsMTQuMDA2eiIvPg0KPC9zdmc+DQo=');
+        }
+
+        strong {
+          font-size: $fs-16;
+          font-weight: $weight-bold;
+        }
+      }
+
+      .message {
+        background-color: #4f91ff;
+
+        &::before {
+          content: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkFsZXJ0X0ljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNOSwxMC45OTloMlY1SDlWMTAuOTk5eiBNOSwxNC45OTloMnYtMkg5VjE0Ljk5OXogTTE2LDBINEMxLjc5MSwwLDAsMS43OTEsMCw0djEyLjAwMQ0KCQkJQzAsMTguMjA5LDEuNzkxLDIwLDQsMjBoMTJjMi4yMDksMCw0LTEuNzkxLDQtMy45OTlWNEMyMCwxLjc5MSwxOC4yMDksMCwxNiwweiBNMTgsMTYuMDAxQzE4LDE3LjEwMywxNy4xMDMsMTgsMTYsMThINA0KCQkJYy0xLjEwMywwLTItMC44OTctMi0xLjk5OVY0YzAtMS4xMDMsMC44OTctMiwyLTJoMTJjMS4xMDMsMCwyLDAuODk4LDIsMlYxNi4wMDF6Ii8+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=');
+        }
+      }
+    }
+  }
+}
+
+/*-----------------------
+    2. MEDIA QUERIES
+-----------------------*/
+@media screen and (max-width: 1365px) {
+  body {
+    &.login {
+      display: block;
+
+      .vklogin-header {
+        display: none;
+      }
+
+      #login {
+        width: 100%;
+        display: block;
+        padding: 80px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    &.login {
+      #login {
+        width: 90%;
+        margin: 0 auto;
+
+        form,
+        #backtoblog,
+        #nav,
+        .message,
+        #login_error {
+          width: auto;
+        }
+      }
+    }
+  }
+}

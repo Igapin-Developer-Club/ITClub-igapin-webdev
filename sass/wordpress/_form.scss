@@ -1,0 +1,353 @@
+.vk-content {
+  /*-------------
+      FORM
+  -------------*/
+  label,
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select,
+  button {
+    font-family: var(--vk-font-primary);
+  }
+
+  label {
+    display: block;
+    margin: 0;
+    color: var(--vk-color-text);
+    line-height: 1em;
+
+    &.label-disabled {
+      opacity: .5;
+    }
+
+    .label-required {
+      color: var(--vk-color-secondary);
+      font-weight: var(--vk-weight-bold);
+    }
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select,
+  button {
+    width: 100%;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: var(--vk-weight-bold);
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea,
+  select {
+    background-color: transparent;
+    border: 1px solid var(--vk-color-border);
+    color: var(--vk-color-text);
+    transition: border-color .2s ease-in-out;
+
+    &:focus {
+      border-color: var(--vk-color-secondary);
+      box-shadow: none;
+      outline: none;
+    }
+
+    &.input-error {
+      border-color: var(--vk-color-tertiary);
+    }
+
+    &.input-disabled {
+      opacity: .5;
+    }
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    &::placeholder {
+      color: var(--vk-color-placeholder);
+    }
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    height: 62px;
+    padding: 0 18px;
+
+    &::placeholder {
+      font-size: 14px;
+      font-weight: var(--vk-weight-medium);
+    }
+  }
+
+  textarea {
+    padding: 14px 18px;
+    resize: none;
+    word-break: break-all;
+
+    &::placeholder {
+      font-weight: var(--vk-weight-semibold);
+    }
+  }
+
+  /*----------------
+      FORM ROW
+  ----------------*/
+  .form-row {
+    width: 100%;
+
+    & + {
+      .form-row {
+        margin-top: 28px;
+      }
+    }
+
+    &.space-between {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .form-item {
+        width: auto;
+      }
+    }
+
+    &.split {
+      display: flex;
+      flex-wrap: nowrap;
+
+      .form-item {
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & > * {
+          margin-bottom: 28px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  /*----------------
+      FORM ITEM
+  ----------------*/
+  .form-item {
+    width: 100%;
+    position: relative;
+
+    &.auto-width {
+      width: auto;
+    }
+
+    &.centered {
+      display: flex;
+      align-items: center;
+    }
+
+    &.split {
+      display: flex;
+
+      &.medium {
+        & > * {
+          margin-right: 16px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      & > * {
+        width: 100%;
+        margin-right: 12px;
+    
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  /*-----------------
+      FORM INPUT
+  -----------------*/
+  .form-input {
+    position: relative;
+
+    &.active {
+      label {
+        background-color: var(--vk-color-body);
+        padding: 0 6px;
+        font-size: 14px;
+        top: -6px;
+        left: 12px;
+      }
+    }
+
+    label {
+      color: var(--vk-color-text-lighter);
+      font-size: 18px;
+      font-weight: var(--vk-weight-semibold);
+      position: absolute;
+      top: 23px;
+      left: 20px;
+      z-index: 2;
+      transition: all .3s ease-in-out;
+      pointer-events: none;
+    }
+  }
+
+  /*----------------------
+      9. FORM SELECT
+  ----------------------*/
+  .form-select-wrap {
+    display: flex;
+
+    .form-select {
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .form-select {
+    width: 100%;
+    height: 48px;
+    position: relative;
+
+    &.v2 {
+      width: auto;
+      height: auto;
+      
+      select {
+        width: auto;
+        height: auto;
+        padding-right: 20px;
+        border: none;
+        font-size: 12px;
+      }
+
+      .form-select-icon {
+        top: 10px;
+        right: 0;
+      }
+    }
+
+    select {
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      padding: 0 40px 0 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: none;
+
+      &:hover {
+        color: var(--vk-color-text);
+      }
+    }
+
+    .form-select-icon {
+      width: 6px;
+      height: 8px;
+      fill: var(--vk-color-icon);
+      transform: rotate(90deg);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      pointer-events: none;
+    }
+
+    label {
+      padding: 0 6px;
+      background-color: var(--vk-color-body);
+      color: var(--color-text-alt-2);
+      font-size: 12px;
+      font-weight: var(--vk-weight-semibold);
+      position: absolute;
+      top: -8px;
+      left: 12px;
+      pointer-events: none;
+    }
+  }
+
+  /*----------------
+      FORM BUTTON
+  ----------------*/
+  .form-button {
+    .form-button-submitting-text,
+    .form-button-loader {
+      display: none;
+    }
+
+    &.form-button-submitting {
+      .form-button-loader {
+        display: block;
+      }
+    }
+  }
+
+  /*---------------------
+      FORM ERROR TEXT
+  ---------------------*/
+  .form-error-text {
+    margin-bottom: 16px;
+    color: var(--vk-color-tertiary);
+    font-size: 14px;
+    font-weight: var(--vk-weight-bold);
+  }
+
+  /*---------------------
+      CHECKBOX BOX
+  ---------------------*/
+  .checkbox-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--vk-color-border);
+    border-radius: 6px;
+    background-color: var(--vk-color-body);
+    cursor: pointer;
+    transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+  
+    &.round {
+      border-radius: 50%;
+    }
+  
+    &.small {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+  
+      .icon-cross {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  
+    &.active {
+      background-color: var(--vk-color-primary);
+      border-color: var(--vk-color-primary);
+  
+      .icon-cross {
+        fill: var(--vk-color-body);
+      }
+    }
+  
+    .icon-cross {
+      fill: transparent;
+      transition: fill .2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.xm-popup_container {
+  width: 90%;
+  max-width: 900px;
+  position: relative;
+
+  &.xm-popup_container-gallery {
+    width: auto;
+  }
+}
+
+.xm-popup_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-overlay);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  overflow: hidden auto;
+
+  &.xm-popup_overlay-premade {
+    display: block;
+
+    .xm-popup_container {
+      margin: auto;
+    }
+  }
+}
+
+.xm-popup_gallery-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.xm-popup_gallery-image {
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.xm-popup_button-next,
+.xm-popup_button-previous {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+}
+
+.xm-popup_button-next {
+  right: 0;
+}
+
+.xm-popup_button-previous {
+  left: 0;
+}
+
+.xm-popup_button-next-icon,
+.xm-popup_button-previous-icon {
+  fill: $white;
+  width: 8px;
+  height: 12px;
+}
+
+.xm-popup_button-previous-icon {
+  transform: rotate(180deg);
+}
+
+.xm-popup_iframe-container {
+  padding-top: 56.25%;
+  background-color: black;
+  position: relative;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.xm-popup_close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--color-secondary-dark);
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 2;
+  transition: background-color .2s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-primary);
+  }
+}
+
+.xm-popup_close-button-icon {
+  fill: $white;
+  width: 12px;
+  height: 12px;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 980px) {
+  .xm-popup_container {
+    &.xm-popup_container-gallery {
+      max-width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .xm-popup_container {
+    width: 85%;
+  }
+}

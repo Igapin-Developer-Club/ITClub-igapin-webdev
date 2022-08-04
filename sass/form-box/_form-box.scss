@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .form-box
+-------------------------------------------------------------------*/
+/*------------------
+    1. FORM BOX
+------------------*/
+.form-box {
+  width: 484px;
+  padding: 64px;
+  border-radius: 12px;
+  background-color: var(--color-box-background);
+  box-shadow: var(--color-overbox-dark-shadow);
+  position: relative;
+
+  &.no-padding {
+    padding: 0;
+
+    .form-box-content {
+      padding: 64px;
+    }
+  }
+
+  .form-box-decoration {
+    position: absolute;
+    top: -14px;
+    left: -80px;
+
+    &.overflowing {
+      top: -68px;
+    }
+  }
+
+  .form-box-title {
+    font-size: $fs-26;
+    text-align: center;
+  }
+
+  .form {
+    margin-top: 76px;
+  }
+
+  .lined-text {
+    margin-top: 40px;
+  }
+
+  .social-links {
+    margin-top: 30px;
+  }
+}
+
+/*--------------------
+    MEDIA QUERIES 
+--------------------*/
+@media screen and (max-width: 500px) {
+  .form-box {
+    padding: 40px 32px;
+  }
+}

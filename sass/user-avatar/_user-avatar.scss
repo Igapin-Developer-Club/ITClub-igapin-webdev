@@ -1,0 +1,1340 @@
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. .user-avatar
+-------------------------------------------------------------------*/
+/*----------------------
+    1. USER AVATAR
+----------------------*/
+.user-avatar {
+  display: block;
+  width: 100px;
+  height: 110px;
+  position: relative;
+
+  &.online,
+  &.offline,
+  &.away {
+    &::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 3px solid var(--color-box-background);
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: -2px;
+      z-index: 10;
+    }
+  }
+
+  &.online {
+    &::before {
+      background-color: $color-online;
+    }
+  }
+
+  &.offline {
+    &::before {
+      background-color: $color-offline;
+    }
+  }
+
+  &.away {
+    &::before {
+      background-color: $color-away;
+    }
+  }
+
+  &.big {
+    width: 148px;
+    height: 164px;
+
+    .user-avatar-content {
+      top: 27px;
+      left: 24px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 14px;
+      left: 12px;
+    }
+
+    .user-avatar-badge {
+      width: 40px;
+      height: 44px;
+      top: 102px;
+      right: 8px;
+
+      .user-avatar-badge-content {
+        top: 5px;
+        left: 4px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-16;
+      }
+    }
+  }
+
+  &.medium {
+    width: 120px;
+    height: 132px;
+
+    .user-avatar-content {
+      top: 21px;
+      left: 19px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 11px;
+      left: 10px;
+    }
+
+    .user-avatar-badge {
+      width: 32px;
+      height: 36px;
+      top: 82px;
+      right: 7px;
+
+      .user-avatar-badge-content {
+        top: 4px;
+        left: 3px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-14;
+      }
+    }
+  }
+
+  &.user-avatar-forum {
+    width: 76px;
+    height: 84px;
+
+    .user-avatar-content {
+      top: 12px;
+      left: 10px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 6px;
+      left: 5px;
+    }
+
+    .user-avatar-badge {
+      width: 22px;
+      height: 24px;
+      top: 27px;
+      right: 2px;
+
+      .user-avatar-badge-content {
+        top: 3px;
+        left: 3px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-10;
+      }
+    }
+  }
+
+  &.small {
+    width: 50px;
+    height: 56px;
+
+    .user-avatar-content {
+      top: 12px;
+      left: 10px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 6px;
+      left: 5px;
+    }
+
+    .user-avatar-badge {
+      width: 22px;
+      height: 24px;
+      top: 27px;
+      right: 2px;
+
+      .user-avatar-badge-content {
+        top: 3px;
+        left: 3px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-10;
+      }
+    }
+  }
+
+  &.smaller {
+    .user-avatar-overlay {
+      width: 30px;
+      height: 32px;
+    }
+
+    .user-avatar-overlay-content {
+      .user-avatar-overlay-content-text {
+        font-size: $fs-11;
+      }
+    }
+  }
+
+  &.no-stats {
+    width: 100px;
+    height: 110px;
+
+    .user-avatar-content {
+      top: 10px;
+      left: 9px;
+    }
+
+    &.big {
+      width: 148px;
+      height: 164px;
+
+      .user-avatar-content {
+        top: 14px;
+        left: 12px;
+      }
+    }
+
+    &.medium {
+      width: 120px;
+      height: 130px;
+
+      .user-avatar-content {
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &.small {
+      width: 50px;
+      height: 56px;
+
+      .user-avatar-content {
+        top: 6px;
+        left: 5px;
+      }
+    }
+
+    &.smaller {
+      width: 34px;
+      height: 36px;
+  
+      .user-avatar-content {
+        top: 2px;
+        left: 2px;
+      }
+    }
+
+    &.micro {
+      width: 22px;
+      height: 24px;
+
+      .user-avatar-content {
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  &.no-border {
+    width: 82px;
+    height: 90px;
+
+    .user-avatar-content {
+      top: 0;
+      left: 0;
+    }
+
+    &.big,
+    &.medium,
+    &.small,
+    &.tiny,
+    &.micro {
+      .user-avatar-content {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.big {
+      width: 124px;
+      height: 136px;
+    }
+
+    &.medium {
+      width: 100px;
+      height: 110px;
+    }
+
+    &.user-avatar-forum {
+      width: 58px;
+      height: 64px;
+    }
+
+    &.small {
+      width: 40px;
+      height: 44px;
+    }
+
+    &.tiny {
+      width: 24px;
+      height: 26px;
+    }
+
+    &.micro {
+      width: 18px;
+      height: 20px;
+    }
+  }
+
+  &.no-outline {
+    width: 84px;
+    height: 92px;
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 0;
+      left: 0;
+    }
+
+    .user-avatar-content {
+      top: 9px;
+      left: 8px;
+    }
+
+    .user-avatar-badge {
+      top: 60px;
+      right: -3px;
+    }
+
+    &.small {
+      width: 40px;
+      height: 44px;
+
+      .user-avatar-content {
+        top: 6px;
+        left: 5px;
+      }
+
+      .user-avatar-badge {
+        top: 21px;
+        right: -3px;
+      }
+    }
+  }
+
+  .user-avatar-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .hexagon-content {
+      background-color: $white;
+    }
+  }
+
+  .user-avatar-content {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    z-index: 3;
+  }
+
+  .user-avatar-progress,
+  .user-avatar-progress-border {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    z-index: 2;
+  }
+
+  .user-avatar-progress {
+    z-index: 3;
+  }
+
+  .user-avatar-progress-border {
+    z-index: 2;
+  }
+
+  .user-avatar-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    top: 68px;
+    right: 5px;
+    z-index: 4;
+
+    .user-avatar-badge-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+
+      .hexagon-content {
+        background-color: $white;
+      }
+    }
+
+    .user-avatar-badge-content {
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      z-index: 5;
+    }
+
+    .user-avatar-badge-text {
+      color: $white;
+      font-size: $fs-12;
+      font-weight: $weight-bold;
+      pointer-events: none;
+      position: relative;
+      z-index: 6;
+    }
+  }
+
+  .user-avatar-overlay {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 11;
+  }
+
+  .user-avatar-overlay-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+
+    .user-avatar-overlay-content-text {
+      color: $white;
+      font-weight: $weight-bold;
+      pointer-events: none;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+/*--------------------------
+    2. RANKED USER AVATAR
+--------------------------*/
+.ranked-user-avatar {
+  display: block;
+  width: 100px;
+  height: 110px;
+  position: relative;
+
+  &.online,
+  &.offline,
+  &.away {
+    &::before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 3px solid var(--color-box-background);
+      border-radius: 50%;
+      position: absolute;
+      top: 3px;
+      left: -2px;
+      z-index: 10;
+    }
+  }
+
+  &.online {
+    &::before {
+      background-color: $color-online;
+    }
+  }
+
+  &.offline {
+    &::before {
+      background-color: $color-offline;
+    }
+  }
+
+  &.away {
+    &::before {
+      background-color: $color-away;
+    }
+  }
+
+  &.big {
+    width: 148px;
+    height: 164px;
+
+    &.no-border {
+      width: 124px;
+      height: 136px;
+
+      .user-avatar-content {
+        top: 14px;
+        left: 12px;
+      }
+
+      .user-avatar-badge {
+        top: 76px;
+        right: -3px;
+      }
+    }
+
+    .user-avatar-content {
+      top: 27px;
+      left: 24px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 14px;
+      left: 12px;
+    }
+
+    .user-avatar-badge {
+      width: 40px;
+      height: 44px;
+      top: 102px;
+      right: 8px;
+
+      .user-avatar-badge-content {
+        top: 5px;
+        left: 4px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-16;
+      }
+    }
+  }
+
+  &.medium {
+    width: 120px;
+    height: 132px;
+
+    &.no-border {
+      width: 100px;
+      height: 110px;
+
+      .user-avatar-content {
+        top: 10px;
+        left: 9px;
+      }
+
+      .user-avatar-badge {
+        top: 60px;
+        right: -3px;
+      }
+    }
+
+    .user-avatar-content {
+      top: 21px;
+      left: 19px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 11px;
+      left: 10px;
+    }
+
+    .user-avatar-badge {
+      width: 32px;
+      height: 36px;
+      top: 82px;
+      right: 7px;
+
+      .user-avatar-badge-content {
+        top: 4px;
+        left: 3px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-14;
+      }
+    }
+  }
+
+  &.small {
+    width: 50px;
+    height: 56px;
+
+    &.no-border {
+      width: 40px;
+      height: 44px;
+
+      .user-avatar-content {
+        top: 6px;
+        left: 5px;
+      }
+
+      .user-avatar-badge {
+        top: 21px;
+        right: -3px;
+      }
+    }
+
+    .user-avatar-content {
+      top: 12px;
+      left: 10px;
+    }
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 6px;
+      left: 5px;
+    }
+
+    .user-avatar-badge {
+      width: 22px;
+      height: 24px;
+      top: 27px;
+      right: 2px;
+
+      .user-avatar-badge-content {
+        top: 3px;
+        left: 3px;
+      }
+
+      .user-avatar-badge-text {
+        font-size: $fs-10;
+      }
+    }
+  }
+
+  &.smaller {
+    .user-avatar-overlay {
+      width: 30px;
+      height: 32px;
+    }
+
+    .user-avatar-overlay-content {
+      .user-avatar-overlay-content-text {
+        font-size: $fs-11;
+      }
+    }
+  }
+
+  &.no-stats {
+    width: 100px;
+    height: 110px;
+
+    .user-avatar-content {
+      top: 10px;
+      left: 9px;
+    }
+
+    &.big {
+      width: 148px;
+      height: 164px;
+
+      .user-avatar-content {
+        top: 14px;
+        left: 12px;
+      }
+    }
+
+    &.medium {
+      width: 120px;
+      height: 130px;
+
+      .user-avatar-content {
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &.small {
+      width: 50px;
+      height: 56px;
+
+      .user-avatar-content {
+        top: 6px;
+        left: 5px;
+      }
+    }
+
+    &.smaller {
+      width: 34px;
+      height: 36px;
+  
+      .user-avatar-content {
+        top: 2px;
+        left: 2px;
+      }
+    }
+
+    &.micro {
+      width: 22px;
+      height: 24px;
+
+      .user-avatar-content {
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  &.no-border {
+    width: 84px;
+    height: 92px;
+
+    &.big,
+    &.medium,
+    &.small {
+      .user-avatar-progress,
+      .user-avatar-progress-border {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.tiny {
+      width: 24px;
+      height: 26px;
+    }
+
+    &.micro {
+      width: 18px;
+      height: 20px;
+    }
+  }
+
+  &.no-outline {
+    width: 84px;
+    height: 92px;
+
+    .user-avatar-progress,
+    .user-avatar-progress-border {
+      top: 0;
+      left: 0;
+    }
+
+    .user-avatar-content {
+      top: 9px;
+      left: 8px;
+    }
+
+    .user-avatar-badge {
+      top: 60px;
+      right: -3px;
+    }
+
+    &.small {
+      width: 40px;
+      height: 44px;
+
+      .user-avatar-content {
+        top: 6px;
+        left: 5px;
+      }
+
+      .user-avatar-badge {
+        top: 21px;
+        right: -3px;
+      }
+    }
+  }
+
+  .user-avatar-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .hexagon-content {
+      background-color: $white;
+    }
+  }
+
+  .user-avatar-content {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    z-index: 3;
+  }
+
+  .user-avatar-progress,
+  .user-avatar-progress-border {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    z-index: 2;
+  }
+
+  .user-avatar-progress {
+    z-index: 3;
+  }
+
+  .user-avatar-progress-border {
+    z-index: 2;
+  }
+
+  .user-avatar-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 32px;
+    position: absolute;
+    top: 68px;
+    right: 5px;
+    z-index: 4;
+
+    .user-avatar-badge-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 4;
+
+      .hexagon-content {
+        background-color: $white;
+      }
+    }
+
+    .user-avatar-badge-content {
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      z-index: 5;
+    }
+
+    .user-avatar-badge-text {
+      color: $white;
+      font-size: $fs-12;
+      font-weight: $weight-bold;
+      pointer-events: none;
+      position: relative;
+      z-index: 6;
+    }
+  }
+
+  .user-avatar-overlay {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 11;
+  }
+
+  .user-avatar-overlay-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+
+    .user-avatar-overlay-content-text {
+      color: $white;
+      font-weight: $weight-bold;
+      pointer-events: none;
+      position: relative;
+      top: 1px;
+    }
+  }
+}
+
+/*----------------------------
+    2. USER AVATAR CIRCLE
+----------------------------*/
+.user-avatar-circle {
+  display: block;
+  width: 106px;
+  height: 106px;
+  border-radius: 50%;
+  background-color: var(--color-box-background);
+  position: relative;
+
+  &.user-avatar-circle-flat {
+    border-radius: 0;
+
+    &.big {
+      .user-avatar-circle-badge {
+        top: 110px;
+        right: 8px;
+      }
+    }
+
+    &.medium {
+      .user-avatar-circle-badge {
+        top: 87px;
+      }
+    }
+
+    &.small {
+      .user-avatar-circle-badge {
+        right: 4px;
+      }
+    }
+
+    &.no-border {
+      &.big {
+        .user-avatar-circle-badge {
+          top: 98px;
+          right: -4px;
+        }
+      }
+
+      &.medium {
+        .user-avatar-circle-badge {
+          top: 77px;
+        }
+      }
+
+      &.small {
+        .user-avatar-circle-badge {
+          right: -2px;
+        }
+      }
+
+      .user-avatar-circle-badge {
+        top: 63px;
+      }
+    }
+
+    .user-avatar-circle-image,
+    .user-avatar-circle-overlay {
+      border-radius: 0;
+    }
+
+    .user-avatar-circle-badge {
+      border-radius: 0;
+      top: 71px;
+
+      .user-avatar-circle-badge-content {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &.big {
+    width: 158px;
+    height: 158px;
+
+    .user-avatar-circle-image {
+      width: 110px;
+      height: 110px;
+      top: 24px;
+      left: 24px;
+    }
+
+    .user-avatar-circle-progress {
+      top: 12px;
+      left: 12px;
+    }
+
+    .user-avatar-circle-badge {
+      width: 40px;
+      height: 40px;
+      top: 104px;
+      right: 13px;
+
+      .user-avatar-circle-badge-content {
+        width: 32px;
+        height: 32px;
+
+        .user-avatar-circle-badge-content-text {
+          font-size: $fs-16;
+        }
+      }
+    }
+  }
+
+  &.medium {
+    width: 128px;
+    height: 128px;
+
+    .user-avatar-circle-image {
+      width: 90px;
+      height: 90px;
+      top: 19px;
+      left: 19px;
+    }
+
+    .user-avatar-circle-progress {
+      top: 10px;
+      left: 10px;
+    }
+
+    .user-avatar-circle-badge {
+      width: 34px;
+      height: 34px;
+      top: 81px;
+      right: 7px;
+
+      .user-avatar-circle-badge-content {
+        width: 28px;
+        height: 28px;
+
+        .user-avatar-circle-badge-content-text {
+          margin-top: 0;
+          font-size: $fs-14;
+        }
+      }
+    }
+  }
+
+  &.user-avatar-circle-forum {
+    width: 64px;
+    height: 64px;
+
+    .user-avatar-circle-image {
+      width: 64px;
+      height: 64px;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &.small {
+    width: 52px;
+    height: 52px;
+
+    .user-avatar-circle-image {
+      width: 30px;
+      height: 30px;
+      top: 11px;
+      left: 11px;
+    }
+
+    .user-avatar-circle-progress {
+      top: 6px;
+      left: 6px;
+    }
+
+    .user-avatar-circle-badge {
+      width: 22px;
+      height: 22px;
+      top: 26px;
+      right: 3px;
+
+      .user-avatar-circle-badge-content {
+        width: 18px;
+        height: 18px;
+
+        .user-avatar-circle-badge-content-text {
+          margin-top: -1px;
+          font-size: $fs-10;
+        }
+      }
+    }
+  }
+
+  &.smaller {
+    width: 34px;
+    height: 34px;
+
+    .user-avatar-circle-image {
+      width: 30px;
+      height: 30px;
+      top: 2px;
+      left: 2px;
+    }
+
+    .user-avatar-circle-overlay {
+      width: 30px;
+      height: 30px;
+      top: 2px;
+      left: 2px;
+
+      .user-avatar-circle-overlay-text {
+        color: $white;
+        font-size: $fs-11;
+        font-weight: $weight-bold;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.tiny {
+    width: 30px;
+    height: 30px;
+
+    .user-avatar-circle-image {
+      width: 26px;
+      height: 26px;
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  &.micro {
+    width: 24px;
+    height: 24px;
+
+    .user-avatar-circle-image {
+      width: 20px;
+      height: 20px;
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  &.no-border {
+    width: 90px;
+    height: 90px;
+    background-color: transparent;
+
+    &.big {
+      width: 134px;
+      height: 134px;
+
+      .user-avatar-circle-image {
+        top: 12px;
+        left: 12px;
+      }
+
+      .user-avatar-circle-badge {
+        top: 92px;
+        right: 1px;
+      }
+    }
+
+    &.medium {
+      width: 108px;
+      height: 108px;
+
+      .user-avatar-circle-image {
+        top: 9px;
+        left: 9px;
+      }
+
+      .user-avatar-circle-badge {
+        top: 71px;
+        right: -3px;
+      }
+    }
+
+    &.user-avatar-circle-forum {
+      width: 64px;
+      height: 64px;
+
+      .user-avatar-circle-image {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.small {
+      width: 40px;
+      height: 40px;
+
+      .user-avatar-circle-image {
+        top: 5px;
+        left: 5px;
+      }
+
+      .user-avatar-circle-badge {
+        top: 20px;
+        right: -3px;
+      }
+    }
+
+    &.smaller {
+      width: 30px;
+      height: 30px;
+
+      .user-avatar-circle-image {
+        top: 0;
+        left: 0;
+      }
+
+      .user-avatar-circle-overlay {
+        width: 30px;
+        height: 30px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.tiny {
+      width: 26px;
+      height: 26px;
+
+      .user-avatar-circle-image {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &.micro {
+      width: 20px;
+      height: 20px;
+
+      .user-avatar-circle-image {
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .user-avatar-circle-image {
+      top: 8px;
+      left: 8px;
+    }
+
+    .user-avatar-circle-progress {
+      top: 0;
+      left: 0;
+    }
+
+    .user-avatar-circle-badge {
+      top: 59px;
+      right: -3px;
+    }
+  }
+
+  &.no-stats {
+    width: 106px;
+    height: 106px;
+
+    &.big {
+      width: 160px;
+      height: 160px;
+
+      .user-avatar-circle-image {
+        width: 136px;
+        height: 136px;
+        top: 12px;
+        left: 12px;
+      }
+    }
+
+    &.medium {
+      width: 130px;
+      height: 130px;
+
+      .user-avatar-circle-image {
+        width: 110px;
+        height: 110px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    &.small {
+      width: 56px;
+      height: 56px;
+
+      .user-avatar-circle-image {
+        width: 44px;
+        height: 44px;
+        top: 6px;
+        left: 6px;
+      }
+    }
+
+    .user-avatar-circle-progress,
+    .user-avatar-circle-badge {
+      display: none;
+    }
+
+    .user-avatar-circle-image {
+      width: 90px;
+      height: 90px;
+      top: 8px;
+      left: 8px;
+    }
+  }
+
+  &.no-border.no-stats {
+    width: 90px;
+    height: 90px;
+
+    &.big {
+      width: 136px;
+      height: 136px;
+    }
+
+    &.medium {
+      width: 110px;
+      height: 110px;
+    }
+
+    &.small {
+      width: 44px;
+      height: 44px;
+    }
+
+    .user-avatar-circle-image {
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .user-avatar-circle-image,
+  .user-avatar-circle-progress,
+  .user-avatar-circle-badge {
+    position: absolute;
+  }
+
+  .user-avatar-circle-image {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    top: 16px;
+    left: 16px;
+  }
+
+  .user-avatar-circle-progress {
+    top: 8px;
+    left: 8px;
+  }
+
+  .user-avatar-circle-badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--color-box-background);
+    top: 67px;
+    right: 5px;
+
+    .user-avatar-circle-badge-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: var(--color-avatar-rank-hexagon);
+      
+      .user-avatar-circle-badge-content-text {
+        margin-top: 1px;
+        color: $white;
+        font-size: $fs-12;
+        font-weight: $weight-bold;
+      }
+    }
+  }
+
+  .user-avatar-circle-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-avatar-overlay-background);
+    position: absolute;
+  }
+}

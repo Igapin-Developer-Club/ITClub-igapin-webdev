@@ -1,0 +1,54 @@
+.vk-content {
+  /*-----------------
+      MESSAGE BOX
+  -----------------*/
+  .message-box {
+    min-height: 100px;
+    border-radius: 12px;
+    padding: 32px 32px 26px 108px;
+    background-color: #3e3f5e;
+    position: relative;
+    margin: 32px 0;
+
+    &.message-box-success {
+      background-color: var(--vk-color-primary);
+    }
+
+    &.message-box-info {
+      background-color: var(--vk-color-secondary);
+    }
+
+    &.message-box-error {
+      background-color: var(--vk-color-tertiary);
+    }
+
+    .message-box-icon-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, .16);
+    }
+
+    .message-box-title,
+    .message-box-text {
+      color: #fff;
+    }
+
+    .message-box-title {
+      font-size: 18px;
+      font-weight: var(--vk-weight-bold);
+    }
+
+    .message-box-text {
+      margin-top: 6px;
+      font-size: 16px;
+      line-height: (24 / 16) * 1em;
+    }
+  }
+}

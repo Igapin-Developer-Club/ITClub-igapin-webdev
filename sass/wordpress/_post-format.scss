@@ -1,0 +1,66 @@
+/*--------------
+    GALLERY
+--------------*/
+.vikinger_gallery-images {
+  margin: 28px 0 18px;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(auto-fit, 100px);
+}
+
+.vikinger_gallery-image {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.vikinger_gallery-info {
+  margin-top: 24px;
+}
+
+.vikinger_remove-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background-color: var(--vk-color-secondary);
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  cursor: pointer;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+
+  &:hover {
+    background-color: var(--vk-color-secondary-hover);
+  }
+}
+
+.vikinger_remove-button-icon {
+  width: 8px;
+  height: 8px;
+  fill: #fff;
+  pointer-events: none;
+}
+
+.vikinger_upload-button {
+  height: 40px;
+  padding: 0 28px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--vk-color-secondary);
+  color: #fff;
+  font-family: var(--vk-font-primary);
+  font-size: 12px;
+  font-weight: var(--vk-weight-bold);
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  box-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+
+  &:hover {
+    background-color: var(--vk-color-secondary-hover);
+  }
+}

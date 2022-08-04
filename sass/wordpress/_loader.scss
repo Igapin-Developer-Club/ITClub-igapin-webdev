@@ -1,0 +1,56 @@
+.vk-content {
+  /*---------------------
+      LOADER SPINNER
+  ---------------------*/
+  .loader-spinner-wrap {
+    &.small {
+      .loader-spinner {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+  
+  .loader-spinner {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--vk-color-primary) 10%, rgba(35, 210, 226, 0) 42%);
+    animation: loader-spinner 1.4s infinite linear;
+    position: relative;
+  
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    &:before {
+      width: 50%;
+      height: 50%;
+      background-color: var(--vk-color-primary);
+      border-radius: 100% 0 0 0;
+    }
+  
+    &:after {
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      background-color: var(--vk-color-body);
+      margin: auto;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  
+  @keyframes loader-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
